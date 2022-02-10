@@ -92,3 +92,114 @@ player.points += 15;
 console.log(player.points);
 player.lastName = "potato"; // property 추가도 가능
 console.log(player);
+
+/* --------------- */
+
+console.log("hello my name is Nico");
+console.log("hello my name is Dal");
+console.log("hello my name is Shigatsu");
+console.log("hello my name is Flynn..");
+
+function sayHello(name, age) {
+  console.log("Hello my name is " + name + " and I'm " + age);
+}
+
+sayHello("Nico", 10);
+sayHello("Dal", 23);
+sayHello("Shigatsu", 21);
+sayHello("Flynn", 30);
+
+function add(a, b) {
+  // 데이터를 function 으로 받아옴
+  console.log(a + b);
+}
+
+add(2, 3); //데이터를 function 에 넣어줌
+
+function div(a, b) {
+  console.log(a / b);
+}
+
+div(10, 5);
+
+const player2 = {
+  name: "nico",
+  sayHello2: function (name) {
+    console.log("Hello " + name + "! nice to meet you!");
+  },
+};
+
+player2.sayHello2("lynn"); //object안에 function 을 넣어서 conosle.log() 처럼 만들 수 있다.
+
+/* --------------- */
+
+const first = 5;
+let isNicoFat = true;
+
+isNicoFat = false;
+
+/*const calculator = {
+  add: function (a, b) {
+    console.log(a + b);
+  },
+  sub: function (a, b) {
+    console.log(a - b);
+  },
+  div: function (a, b) {
+    console.log(a / b);
+  },
+  power: function (a, b) {
+    alert(a ** b);
+  },
+};
+
+calculator.add(5, 2);
+calculator.sub(5, 2);
+calculator.div(5, 2);
+calculator.power(5, 2);
+*/
+
+/* 
+function에서의 console.log 사용이 안좋은 이유
+
+
+console.log(calculator.power(5, 2)); //undefined
+*/
+// console.log , alert에서의 결과를 얻는 것이 아니라 함수에서 결과를 값으로 받고 싶음.
+const age = 96;
+
+function calculateKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const KrAge = calculateKrAge(age);
+
+console.log(KrAge);
+
+const calculator = {
+  add: function (a, b) {
+    return a + b;
+  },
+  sub: function (a, b) {
+    return a - b;
+  },
+  div: function (a, b) {
+    return a / b;
+  },
+  power: function (a, b) {
+    return a ** b;
+  },
+};
+
+const addResult = calculator.add(5, 2);
+console.log(addResult);
+
+const subResult = calculator.sub(addResult, 2);
+console.log(subResult);
+
+const divResult = calculator.div(subResult, 2);
+console.log(divResult);
+
+const powerResult = calculator.power(divResult, subResult);
+console.log(powerResult);
+// 이렇게 하면 코드들이 서로 다 연결되게 된다.
