@@ -229,8 +229,30 @@ if(condition) {
 }
 */
 
-if (isNaN(Age)) {
-  console.log("Please write a number");
-} else {
-  console.log("Thank you for writing your age.");
+if (isNaN(Age) || Age < 0) {
+  console.log("Please write a real positive number");
+} else if (Age < 18) {
+  console.log("You are too young.");
+} else if (Age >= 18 && Age <= 50) {
+  console.log("You can drink!");
+} else if (Age > 50 && Age <= 80) {
+  console.log("You should exercise");
+} else if (Age === 100) {
+  console.log("wow you are wise"); //순서를 잘 정해줘야 한다.
+} else if (Age > 80) {
+  console.log("You can do whatever you want.");
 }
+
+/* 복습 */
+
+// || OR
+true || true === true;
+false || true === true;
+true || false === true;
+false || false === false;
+
+// && AND
+true && true === true;
+true && false === false;
+false && true === false;
+false && false === false;
