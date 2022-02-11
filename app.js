@@ -203,3 +203,34 @@ console.log(divResult);
 const powerResult = calculator.power(divResult, subResult);
 console.log(powerResult);
 // 이렇게 하면 코드들이 서로 다 연결되게 된다.
+// return 을 사용하면 거기서 바로 함수가 끝나버리기 때문에 return 뒤에는 다른 작업을 추가 수행할 수 없다.
+
+/* 조건문 */
+
+//const Age = prompt("How old are you?");  prompt 사용하면 css 입힐 수도 없고 아주 오래된 방법.
+
+//console.log(typeof Age);  기본 값은 string이기 때문에 number로 바꿔야 함.
+
+//console.log(typeof parseInt(Age)); parseInt를 이용해 type을 변경시켜준다.
+
+const Age = parseInt(prompt("How old are you?"));
+
+console.log(Age);
+
+// 나이 계산기 만들기
+
+console.log(isNaN(Age)); // Age가 NaN이면 true, 아니면 false
+
+/*
+if(condition) {
+    /// condition === true
+} else {
+    /// condition === false
+}
+*/
+
+if (isNaN(Age)) {
+  console.log("Please write a number");
+} else {
+  console.log("Thank you for writing your age.");
+}
