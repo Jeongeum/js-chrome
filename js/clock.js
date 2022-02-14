@@ -1,11 +1,16 @@
-const clock = document.querySelector("h2#clock");
+const calendar = document.querySelector("h2#calendar");
+const clock = document.querySelector("h3#clock");
 
 function getClock() {
-  const date = new Date();
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  const dateDefine = new Date();
+  const year = dateDefine.getFullYear();
+  const month = String(dateDefine.getMonth() + 1).padStart(2, "0");
+  const date = String(dateDefine.getDate()).padStart(2, "0");
+  const hours = String(dateDefine.getHours()).padStart(2, "0");
+  const minutes = String(dateDefine.getMinutes()).padStart(2, "0");
+  //const seconds = String(dateDefine.getSeconds()).padStart(2, "0");
+  calendar.innerText = `${year}.${month}.${date}`;
+  clock.innerText = `${hours}:${minutes}`;
 }
 
 //setInterval(sayHello, 5000); 5초 후 마다 함수 실행

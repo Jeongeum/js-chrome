@@ -10,27 +10,33 @@
 </head>
 
 <body>
-    <h2 id="clock">00:00:00</h2>
+
+    <h3 id="clock">00:00:00</h3>
+    <h2 id="calendar">00/00/0</h2>
     <form id="login-form" class="hidden">
         <input required maxlength="15" type="text" placeholder="What is your name?">
-        <input type="submit" value="Log In" /> <!-- submit은 엔터/버튼을 누르면 발생하고 브라우저가 재시작된다. -->
+        <!--<input type="submit" value="Log In" />  submit은 엔터/버튼을 누르면 발생하고 브라우저가 재시작된다. -->
     </form>
 
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required />
+        <input type="text" placeholder="Write a To Do here" required />
     </form>
     <ul id="todo-list"></ul>
     <div id="quote">
         <span></span>
         <span></span>
     </div>
-
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
