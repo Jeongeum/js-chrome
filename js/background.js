@@ -18,8 +18,6 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
 
-console.log(bgImage);
-
 document.body.appendChild(bgImage); // body의 맨 뒤에 넣는다.
 
 /* 
